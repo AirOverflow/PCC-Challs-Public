@@ -1,0 +1,34 @@
+name: Blocked
+author: abdullahzamir
+category: Crypto
+description: |-
+  
+  Block ciphers encrypt data in blocks :)
+
+  **Author**: [abdullahzamir](https://abdullahzamir.github.io)
+
+value: 300
+type: container
+
+flags:
+  - {
+      type: "regex",
+      content: "PCC{Block3d_c1phers_c4n_b3_man1pulated_[7-9s-zS-Z]{4}[0-9a-zA-Z]{3}[1-9a-zA-Z]{8}}",
+      data: "case_sensitive"
+  }
+
+extra:
+  initial: 300
+  decay: 25
+  minimum: 150
+  image: pcc-crypto-blocked:latest
+  port: 8000
+  command: ""
+  volumes: ""
+  ctype: tcp
+
+files:
+  - dist/crypto-blocked.tar.gz
+
+state: visible
+version: "0.1"

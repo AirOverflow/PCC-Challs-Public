@@ -1,0 +1,37 @@
+name: Count
+author: abdullahzamir
+category: Crypto
+description: |-
+
+  its so frustating to generate key again and again
+
+  **Author**: [abdullahzamir](https://abdullahzamir.github.io)
+
+value: 300
+type: container
+
+
+flags:
+  - {
+      type: "regex",
+      content: "PCC{Cr1b_dragg1ng_1s_c00l_[7-9s-zS-Z]{4}[0-9a-zA-Z]{3}[1-9a-zA-Z]{8}}",
+      data: "case_sensitive"
+  }
+
+extra:
+  initial: 300
+  decay: 25
+  minimum: 150
+  image: pcc-crypto-count:latest
+  port: 8000
+  command: ""
+  volumes: ""
+  ctype: tcp
+
+
+# If there is a file, you can specify files
+files:
+  - dist/crypto-count.tar.gz
+
+state: visible
+version: "0.1"

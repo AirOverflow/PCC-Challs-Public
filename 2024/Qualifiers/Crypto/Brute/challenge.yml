@@ -1,0 +1,34 @@
+name: Brute
+author: abdullahzamir
+category: Crypto
+description: |-
+  
+  its in the name
+  
+  **Author**: [abdullahzamir](https://abdullahzamir.github.io)
+
+value: 150
+type: container
+
+flags:
+  - {
+      type: "regex",
+      content: "PCC{l333t_1n_th3_M1ddl3_[7-9s-zS-Z]{4}[0-9a-zA-Z]{3}[1-9a-zA-Z]{8}}",
+      data: "case_sensitive"
+  }
+
+extra:
+  initial: 150
+  decay: 25
+  minimum: 50
+  image: pcc-crypto-brute:latest
+  port: 8000
+  command: ""
+  volumes: ""
+  ctype: tcp
+
+files:
+  - dist/crypto-brute.tar.gz
+
+state: visible
+version: "0.1"

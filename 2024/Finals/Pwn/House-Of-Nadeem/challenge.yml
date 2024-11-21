@@ -1,0 +1,34 @@
+name: "House of Nadeem"
+author: TheFlash2k
+category: Pwn
+description: |-
+  
+  The House of Nadeem is an honorable house that is *almost* perfect.
+
+  **Author**: [TheFlash2k](https://theflash2k.me)
+
+value: 500
+type: container
+
+extra:
+  initial: 500
+  decay: 50
+  minimum: 300
+  image: pcc-pwn-houseofnadeem:latest
+  port: 8000
+  command: ""
+  volumes: ""
+  ctype: tcp
+
+flags:
+  - {
+      type: "regex",
+      content: "PCC{0n3_byt3_t0_c0nqu3r_th3_w0rld_[7-9s-zS-Z]{4}[0-9a-zA-Z]{3}[1-9a-zA-Z]{8}}",
+      data: "case_sensitive"
+  }
+
+files:
+  - dist/pwn-house-of-nadeem.tar.gz
+
+state: visible
+version: "0.1"

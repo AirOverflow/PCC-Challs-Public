@@ -1,0 +1,19 @@
+name: Fuji-San
+author: hash3liZer
+category: Web
+description: |-
+  Fuji-san is a volcanic mountain in Japan. Only a few people have been able to climb it. Can you climb it?
+
+start_time: 2024-11-13 10:00:00
+end_time: 2024-11-13 11:00:00
+hints:
+  - You can mess with the input of `JSON.parse`. I know you know it already. But it is what it is. 
+  - The `host` and `hostname` are 2 separate fields returned by the `parse` object.
+  - Did you know that a url without scheme and path is still a complete valid url? Now write the script FASTTTTTTT!!!. Cause you are running out of time.
+
+teams:
+  - 0
+  - 1
+
+file: dist/showdown-web-fujisan.zip
+visible: True

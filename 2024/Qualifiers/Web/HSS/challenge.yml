@@ -1,0 +1,33 @@
+name: HSS
+author: hash3liZer
+category: Web
+description: |
+  Waiting for you...
+
+  **Author:** [hash3liZer](https://team.airoverflow.com)
+
+value: 500
+type: container
+
+extra:
+  initial: 500
+  decay: 25
+  minimum: 300
+  image: pcc-web-hss:latest
+  port: 1337
+  command: ""
+  volumes: ""
+  ctype: web
+
+flags:
+  - {
+    type: "regex",
+    content: "PCC{t0ny_kr00s_s1t3_scr1pt1ng_[a-zA-Z0-9]{10}}",
+    data: "case_sensitive"
+  }
+
+files:
+  - dist/web-HSS.tar.gz
+
+static: visible
+version: "0.1"

@@ -1,0 +1,1 @@
+Due to shortage of time, I did not write an official writeup. However, I knew 72ghoul would solve this so I'm uploading his solve as "official" writeup :D

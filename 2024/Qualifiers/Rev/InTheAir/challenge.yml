@@ -1,0 +1,28 @@
+name: In The Air.
+author: CY30RG
+category: Rev
+description: |-
+  Frappy or Crappy Bird.
+
+  **Author**: [CY30RG](https://team.airoverflow.com)
+
+value: 150
+type: dynamic
+
+extra:
+  initial: 150
+  decay: 25
+  minimum: 50
+
+flags:
+  - {
+      type: "static",
+      content: "PCC{1n_th3_41r_4nd_fl0w}",
+      data: "case_insensitive"
+  }
+
+files:
+  - dist/rev-intheair.tar.gz
+
+state: visible
+version: "0.1"

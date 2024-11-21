@@ -1,0 +1,18 @@
+name: Load-Me
+author: TheFlash2k
+category: Pwn
+description: |-
+    I mean, it couldn't get simpler than this.
+    How well do you know the basics?
+
+start_time: 2024-11-05 10:00:00
+end_time: 2024-11-05 11:00:00
+hints:
+    - Check the permissions on mmaped chunk. `Executable` is funny.
+    - Try and read a file that can give you *gadgets*.
+    - System function and one gadgets might not work as expected, but instead of **CALL**ing **SYS**tem, you can...
+teams:
+    - 0
+    - 1
+file:
+  dist/showdown-pwn-loadme.tar.gz

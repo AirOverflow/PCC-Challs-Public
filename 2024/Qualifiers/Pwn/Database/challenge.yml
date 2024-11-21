@@ -1,0 +1,33 @@
+name: "Database"
+author: TheFlash2k
+category: Pwn
+description: |-
+  I made a simple database for my uni, I hope they use it.
+
+  **Author**: [TheFlash2k](https://theflash2k.me)
+
+value: 500
+type: container
+
+extra:
+  initial: 500
+  decay: 50
+  minimum: 300
+  image: pcc-pwn-database:latest
+  port: 8000
+  command: ""
+  volumes: ""
+  ctype: tcp
+
+flags:
+  - {
+      type: "regex",
+      content: "PCC{s0m3t1m3s_all_y0u_n33d_1s_on3_sm4ll_pr1m1t1v3_t0_d0_b1g_th1ng5_[7-9s-zS-Z]{4}[0-9a-zA-Z]{3}[1-9a-zA-Z]{8}}",
+      data: "case_sensitive"
+  }
+
+files:
+  - dist/pwn-database.tar.gz
+
+state: visible
+version: "0.1"

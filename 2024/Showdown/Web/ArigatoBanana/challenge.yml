@@ -1,0 +1,19 @@
+name: Arigato Banana
+author: hash3liZer
+category: Web
+description: |-
+  ARIGATO BANANA 🍌. This is for my friend GC in the name of MZ. 
+
+start_time: 2024-11-13 10:00:00
+end_time: 2024-11-13 11:00:00
+hints:
+  - Have you carefully read all the Schemas in db.js file? Maybe you can store something really interesting in a Schema. 
+  - There's no check on quantity of bananas while adding to cart. Maybe check this thing?
+  - Hmmmmm, still no??? Bruhh!!!! Comeonnnn!!!! Re-read the loop in /checkout route. I am not sure if i am good at writing code. 
+
+teams:
+  - 0
+  - 1
+
+file: dist/showdown-web-arigato-banana.zip
+visible: True

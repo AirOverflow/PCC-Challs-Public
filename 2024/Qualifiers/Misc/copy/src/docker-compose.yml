@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  chall:
+    build:
+      dockerfile: ./Dockerfile.dist
+    ports:
+      - 31337:8000

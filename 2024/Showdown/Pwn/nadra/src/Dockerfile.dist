@@ -1,0 +1,7 @@
+FROM theflash2k/pwn-chal:latest
+
+ENV CHAL_NAME=profile
+COPY ${CHAL_NAME} .
+COPY --chmod=550 --chown=root:ctf-player ld.so .
+COPY --chmod=550 --chown=root:ctf-player libc.so.6 .
+COPY flag.txt .

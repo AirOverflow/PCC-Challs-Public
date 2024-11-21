@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  plusplus:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dist
+    ports:
+      - 31337:8000

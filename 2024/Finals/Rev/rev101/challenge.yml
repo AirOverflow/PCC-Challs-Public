@@ -1,0 +1,29 @@
+name: "Rev101"
+author: TheFlash2k
+category: Rev
+description: |-
+  
+  I love C++ (not rev tho :().
+
+  **Author**: [TheFlash2k](https://theflash2k.me)
+
+value: 300
+type: dynamic
+
+extra:
+  initial: 300
+  decay: 25
+  minimum: 150
+
+flags:
+  - {
+      type: "static",
+      content: "PCC{z3_m4k3s_l1f3_s0_much_34s1er_bu7_th1s_fl4g_1s_v3ry_l0ng_which_m4k3s_1t_h4rd}",
+      data: "case_insensitive"
+  }
+
+files:
+  - dist/rev-rev101.tar.gz
+
+state: visible
+version: "0.1"

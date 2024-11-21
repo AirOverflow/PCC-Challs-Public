@@ -1,0 +1,30 @@
+FROM node:21.5-slim@sha256:c88704924204ee6d4e9da02275a8fd27355502f7177e4175cd0d3a4375a9c9c8
+
+ARG DEBIAN_FRONTEND=noninteractive
+ENV NODE_ENV production
+ENV USER hash
+
+RUN apt update && apt install -y tzdata openssl
+RUN dpkg-reconfigure tzdata
+
+RUN adduser --disabled-password --gecos "" --uid 1001 $USER
+RUN mkdir /app
+WORKDIR /app
+
+RUN echo "PCC{DUMMY}" > /flag.txt
+RUN chown root:root /flag.txt
+
+COPY --chown=root:root app/server.js /app/
+COPY --chown=root:root app/package.json /app/
+COPY --chown=root:root app/package-lock.json /app/
+
+RUN npm install
+
+RUN chmod 644 /flag.txt
+
+USER $USER
+EXPOSE 1337
+
+ENTRYPOINT [ "node", "server.js" ]
+
+

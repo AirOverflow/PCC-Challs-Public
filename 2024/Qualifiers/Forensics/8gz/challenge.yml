@@ -1,0 +1,29 @@
+name: 8gz
+author: MikiVirus
+category: Forensics
+description: |-
+  My G conatains 0 confidence. 
+
+  **Author**: [MikiVirus](https://mikivirus/github.io)
+
+value: 150
+type: dynamic
+
+extra:
+  initial: 150
+  decay: 25
+  minimum: 50
+
+flags:
+  - {
+      type: "static",
+      content: "PCC{5T3G4N0GR4PHY_15_N0T_F0R3N51CS}",
+      data: "case_insensitive"
+  }
+
+# If there is a file, you can specify files
+files:
+  - dist/for-8gz.tar.gz
+
+state: visible
+version: "0.1"

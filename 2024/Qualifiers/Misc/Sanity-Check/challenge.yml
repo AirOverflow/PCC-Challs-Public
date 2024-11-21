@@ -1,0 +1,18 @@
+name: Sanity Check
+author: MikiVirus
+category: Misc
+description: |-
+  Join the [Discord](https://discord.gg/s4wEUruyRr)
+
+value: 1
+type: static
+
+flags:
+  - {
+      type: "static",
+      content: "PCC{2024_w3_b0ut_t0_m4k3_h1st0ry}",
+      data: "case_insensitive"
+  }
+  
+state: visible
+version: "0.1"

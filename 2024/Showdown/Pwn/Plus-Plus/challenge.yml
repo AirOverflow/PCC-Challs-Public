@@ -1,0 +1,23 @@
+name: "Plus-Plus"
+author: TheFlash2k
+category: Pwn
+description: |-
+  Everything is better (and safer?) in Plus Plus.
+
+  > Binary was compiled under: `Ubuntu-24.04+libfmt-dev9.1.0+ds1-2+gcc-13.2.0` (libfmt requires >=c++-20)
+
+start_time: "2024-11-13 11:55:00"
+end_time: "2024-11-13 12:55:00"
+hints:
+  - The library itself has a very detailed format specifications. But, you need to just look into expansions
+  - Expanding the index to the size of buffer can give you a good leak.
+  - "An example of the required format specifier can be: {0:a>10}"
+teams:
+  - 3
+  - 9
+file:
+  showdown-plusplus.tar.gz
+container:
+  image: showdown-plusplus:latest
+  port: 8000
+  external_port: 0

@@ -1,0 +1,34 @@
+name: "Infected"
+author: MikiVirus
+category: Forensics
+description: |-
+  
+  When I start my computer, as soon as system processes begin, my memory usage spikes to 100%, causing my computer to become extremely slow. I suspect my computer might be infected with a virus. Could you help me identify and remove it?  You need to find: 
+  1. Malicious File Name
+  2. File SHA-256 Hash
+  3. Malware Category
+  4. Malware Submission Date (YYYY-MM-DD)
+  Sample Flag:
+  PCC{Malicious_File_Name-SHA256-Malware_Category-Malware_Submission_Date}
+  PCC{virus.exe-0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0-Adware-2021-01-01}
+  [DownloadFile](https://drive.google.com/drive/folders/1OA2KG3428zRhlWci4WfJLb0u8RrZD6-o?usp=sharing)
+
+  **Author**: [MikiVirus](https://mikivirus0.github.io)
+
+value: 250
+type: dynamic
+
+extra:
+  initial: 250
+  decay: 25
+  minimum: 150
+
+flags:
+  - {
+      type: "static",
+      content: "PCC{DWM.exe_b01757aae7403720665ae43b35c52f1fce63ffab0fbdfb6d0b5607ac3146c353_trojan_2024-08-29}",
+      data: "case_insensitive"
+  }
+
+state: visible
+version: "0.1"

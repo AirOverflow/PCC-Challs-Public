@@ -1,0 +1,28 @@
+name: AirSafe
+author: CY30RG
+category: Rev
+description: |-
+  It's safe in the air, right?
+
+  **Author**: [CY30RG](https://team.airoverflow.com)
+
+value: 150
+type: dynamic
+
+extra:
+  initial: 150
+  decay: 25
+  minimum: 50
+
+flags:
+  - {
+      type: "static",
+      content: "PCC{n3xt_t1m3_us3_duck_t4pe_f0r_s3cur1ty}",
+      data: "case_sensitive"
+  }
+
+files:
+  - dist/rev-airsafe.tar.gz
+
+state: visible
+version: "0.1"

@@ -1,0 +1,33 @@
+name: four0four
+author: hash3liZer
+category: Web
+description: |-
+  I made a simple PHP web app that returns a 404 error. Can you find the flag?
+
+  **Author:** [hash3liZer](https://team.airoverflow.com)
+
+value: 150
+type: container
+
+extra:
+  initial: 150
+  decay: 25
+  minimum: 50
+  image: pcc-web-four0four:latest
+  port: 80
+  command: ""
+  volumes: ""
+  ctype: web
+
+flags:
+  - {
+    type: "regex",
+    content: "PCC{ph4r_d3s3r1al1z4t10n_1s_ez_[a-zA-Z0-9]{15}}",
+    dataL: "case_sensitive"
+  }
+
+files:
+  - dist/web-four0four.tar.gz
+
+static: visible
+version: "0.1"

@@ -1,0 +1,33 @@
+name: zoom
+author: hash3liZer
+category: Web
+description: |-
+  I am zoom & you are flash. Lets see who wins?
+
+  **Author:** [hash3liZer](https://team.airoverflow.com)
+
+value: 300
+type: container
+
+extra:
+  initial: 300
+  decay: 25
+  minimum: 150
+  image: pcc-web-zoom:latest
+  port: 1337
+  command: ""
+  volumes: ""
+  ctype: web
+
+flags:
+  - {
+    type: "regex",
+    content: "PCC{z00m_v5_fl4sh_hehe_fl4sh_1s_f4st3r_[a-zA-Z0-9]{10}}",
+    dataL: "case_sensitive"
+  }
+
+files:
+  - dist/web-zoom.tar.gz
+
+static: visible
+version: "0.1"

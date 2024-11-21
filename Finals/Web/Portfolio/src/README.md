@@ -1,1 +1,0 @@
-Portfolio from: [Github](https://github.com/bedimcode/portfolio-responsive-complete)

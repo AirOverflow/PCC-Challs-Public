@@ -1,0 +1,25 @@
+name: Shinkansen
+author: hash3liZer
+category: Web
+description: |-
+  Shinkansen is a bullet train that is supposed to take you to showdown. However, you need to get your things sorting with the boarding
+  card. Make sure to get your boarding card in order to get to showdown. 
+
+start_time: 2024-11-13 10:00:00
+end_time: 2024-11-13 11:00:00
+hints:
+  - The functions of parsing numbers are known to be really vulnerable in javascript. The question is how? On top of that you can use strings hehe. 
+  - The function parseFloat is known to return exponential values when the input is too large. But what if output is passed to parseInt function???
+  - There's a hidden input var in /execute endpoint... Maybe get some glassess like me to see it?
+
+teams:
+  - 0
+  - 1
+
+file: dist/showdown-web-shinkansen.zip
+visible: True
+
+[container]
+image = "web-shinkansen:latest"
+port = 1337
+external_port = 0

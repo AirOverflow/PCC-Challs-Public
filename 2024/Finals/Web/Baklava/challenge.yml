@@ -1,0 +1,33 @@
+name: Baklava
+author: hash3liZer
+category: Web
+description: |-
+  Lets try the ultimate sweet dish, Baklava. It's a sweet pastry made of layers of filo filled with chopped nuts and sweetened and held together with syrup or honey. But, this Baklava is a bit different. It's a web challenge. Can you solve it?
+
+  **Author:** *[hash3liZer](https://shameerkashif.me)*
+
+value: 150
+type: container
+
+extra:
+  initial: 150
+  decay: 25
+  minimum: 50
+  image: pcc-web-bakalva:latest
+  port: 1337
+  command: ""
+  volumes: ""
+  ctype: web
+
+flags:
+  - {
+    type: "regex",
+    content: "PCC{pr0t0typ3_p0llut10n_h3h3_[a-zA-Z0-9]{10}}",
+    dataL: "case_sensitive"
+  }
+
+files:
+  - dist/web-baklava.tar.gz
+
+static: visible
+version: "0.1"

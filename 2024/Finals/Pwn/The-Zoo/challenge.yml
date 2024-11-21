@@ -1,0 +1,32 @@
+name: "The-Zoo"
+author: TheFlash2k
+category: Pwn
+description: |-
+  The Zoo is a VERY scary place. Thankfully, you have got animals to work with.
+
+  **Author**: [TheFlash2k](https://theflash2k.me)
+value: 300
+type: container
+
+extra:
+  initial: 300
+  decay: 50
+  minimum: 150
+  image: pcc-pwn-thezoo:latest
+  port: 8000
+  command: ""
+  volumes: ""
+  ctype: tcp
+
+flags:
+  - {
+      type: "regex",
+      content: "PCC{h34p5_0f_z00_4nd_4n1m4l5_[7-9s-zS-Z]{4}[0-9a-zA-Z]{3}[1-9a-zA-Z]{8}}",
+      data: "case_sensitive"
+  }
+
+files:
+  - dist/pwn-thezoo.tar.gz
+
+state: visible
+version: "0.1"

@@ -1,0 +1,35 @@
+name: "LLaaS"
+author: TheFlash2k
+category: Pwn
+description: |-
+  ISTG, Ashfaq Nadeem is a legend. He implemented his own Linked List back in the day
+  and exposed it as a service, called it LLaaS. It was secure AF.
+  But I heard that he was a bit too confident in his skills.
+
+  **Author**: [TheFlash2k](https://theflash2k.me)
+
+value: 300
+type: container
+
+extra:
+  initial: 300
+  decay: 50
+  minimum: 150
+  image: pcc-pwn-llaas:latest
+  port: 8000
+  command: ""
+  volumes: ""
+  ctype: tcp
+
+flags:
+  - {
+      type: "regex",
+      content: "PCC{v74bl3_h1j4cks_ar3_fun_[7-9s-zS-Z]{4}[0-9a-zA-Z]{3}[1-9a-zA-Z]{8}}",
+      data: "case_sensitive"
+  }
+
+files:
+  - dist/pwn-llaas.tar.gz
+
+state: visible
+version: "0.1"

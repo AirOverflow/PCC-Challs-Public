@@ -1,0 +1,29 @@
+name: tradition
+author: MikiVirus
+category: Forensics
+description: |-
+  this pookie kid lossed his flag in memory :<
+
+  Flag Format: "PCC24{}"
+
+  [Download File](https://drive.google.com/drive/folders/1awOAm56uBVTUsmY-gpylxWUzcE617Ogv?usp=sharing)
+
+  **Author**: [MikiVirus](https://mikivirus0.github.io)
+
+value: 300
+type: dynamic
+
+extra:
+  initial: 300
+  decay: 25
+  minimum: 150
+
+flags:
+  - {
+      type: "static",
+      content: "PCC24{3C0J15_B3TT3R_TH3N_3M0J1}",
+      data: "case_insensitive"
+  }
+
+state: visible
+version: "0.1"

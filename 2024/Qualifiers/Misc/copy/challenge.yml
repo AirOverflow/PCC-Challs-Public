@@ -1,0 +1,37 @@
+name: Copy.
+author: MikiVirus
+category: Misc
+description: |-
+
+  TheFlash2k modified an already existing plugin to cater our needs.
+
+  Someone else did the same; copy the code, the commit messages and `git push`.
+
+  Here's all you need: [Challenge Repo](https://github.com/theflash2k/containers)
+
+  You need to find the username who copied the actual code along with the commit hash where *due* credits were given.
+
+  **Author**: [MikiVirus](https://mikivirus0.github.io)
+
+value: 150
+type: container
+
+extra:
+  initial: 150
+  decay: 25
+  minimum: 50
+  image: pcc-misc-copy:latest
+  port: 8000
+  command: ""
+  volumes: ""
+  ctype: tcp
+
+flags:
+  - {
+    type: "regex",
+    content: "PCC{why_c0py_wh3n_f0rk_[a-zA-Z0-9]{9}}",
+    dataL: "case_sensitive"
+  }
+  
+state: visible
+version: "0.1"

@@ -1,1 +1,0 @@
-docker build -t pccfinals_pwn_descriptive:latest .

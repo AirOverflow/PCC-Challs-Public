@@ -1,0 +1,37 @@
+name: CaaS-v3
+author: TheFlash2k
+category: Misc
+description: |-
+  I mean, CaaS' and PCC are a better love story than twilight.
+
+  > *NOTE*: The flag is 77-bytes in length.
+
+  > This challenge is eligible for a bounty of Rs. 1000/-. First one to solve it with a payload <= 200-bytes, open a ticket, along with your payload.
+
+  **Author:** [TheFlash2k](https://theflash2k.me)
+
+value: 500
+type: container
+
+extra:
+  initial: 500
+  decay: 25
+  minimum: 300
+  image: pcc-misc-caasv3
+  port: 8000
+  command: ""
+  volumes: ""
+  ctype: tcp
+
+flags:
+  - {
+    type: "regex",
+    content: "PCC{d1gr4ph5_4nd_tr1gr4ph5_w3r3_w31rd_f34tur35_gl4d_th3yr3_r3m0v3d_[a-zA-Z0-9]{9}}",
+    dataL: "case_sensitive"
+  }
+
+files:
+  - dist/misc-caasv3.tar.gz
+
+static: visible
+version: "0.1"

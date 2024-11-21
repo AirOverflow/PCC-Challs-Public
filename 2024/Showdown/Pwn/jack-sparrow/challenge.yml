@@ -1,0 +1,20 @@
+name: Jack Sparrow
+author: TheFlash2k
+category: Pwn
+description: |-
+  Jack Sparrow in 2018; took control of his ship back. The heat was high.
+  We time travelled back to help him find a destination where he'll be safe.
+
+start_time: 2024-11-13 10:00:00
+end_time: 2024-11-13 11:00:00
+hints:
+  - Have you found the weird looking `de-referenced` write?
+  - Well, that de-referenced write and the printf, chained with that last obsecure `free`?
+  - You could use a one-gadget if you don't control rdi ¯\_(ツ)_/¯
+
+teams:
+  - 0
+  - 1
+
+file: dist/showdown-pwn-jack-sparrow.tar.gz
+visible: True

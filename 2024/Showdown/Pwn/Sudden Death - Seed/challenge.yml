@@ -1,0 +1,17 @@
+name: Seed.
+author: TheFlash2k
+category: Pwn
+description: |-
+    Seed and Randomize. Should get it done.
+
+start_time: 2024-11-05 10:00:00
+end_time: 2024-11-05 11:00:00
+hints:
+    - No Hints.
+    - No Hints.
+    - No Hints.
+teams:
+    - 0
+    - 1
+file:
+  dist/showdown-sd-pwn-seed.tar.gz

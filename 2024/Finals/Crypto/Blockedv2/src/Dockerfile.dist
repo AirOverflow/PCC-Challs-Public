@@ -1,0 +1,7 @@
+FROM theflash2k/pwn-chal:crypto
+
+RUN pip install pwntools
+ENV CHAL_NAME="challenge.py"
+
+COPY flag.txt /
+COPY ${CHAL_NAME} /app/${CHAL_NAME} 

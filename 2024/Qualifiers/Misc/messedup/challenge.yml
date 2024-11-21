@@ -1,0 +1,29 @@
+name: messedup
+author: MikiVirus
+category: Misc
+description: |-
+  i dont know, i was writing my first code, but my friend played with it and now it's all messed up... i dont know what to do with these empty folders :(
+  Flag Format: PCC{...} Remove Spaces with underscores.
+
+  **Author**: [MikiVirus](https://mikivirus0.github.io)
+
+value: 150
+type: dynamic
+
+extra:
+  initial: 150
+  decay: 25
+  minimum: 50
+
+flags:
+  - {
+      type: "static",
+      content: "PCC{Hello,_World!}",
+      data: "case_insensitive"
+  }
+
+files:
+  - dist/misc-messedup.tar.gz
+
+state: visible
+version: "0.1"

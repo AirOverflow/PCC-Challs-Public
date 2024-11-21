@@ -1,0 +1,35 @@
+name: "FHoD"
+author: TheFlash2k
+category: Pwn
+description: |-
+  File Handling on Demand is becoming the new norm. I have created a service
+  that allows you to read and write files on the server. I have tested it myself.
+  Pretty safe.
+
+  **Author**: [TheFlash2k](https://theflash2k.me)
+
+value: 300
+type: container
+
+extra:
+  initial: 300
+  decay: 25
+  minimum: 150
+  image: pcc-pwn-fhod:latest
+  port: 8000
+  command: ""
+  volumes: ""
+  ctype: tcp
+
+flags:
+  - {
+      type: "regex",
+      content: "PCC{f1l3_struc7s_ar3_ju5t_t00_0p_[7-9s-zS-Z]{3}[0-9a-zA-Z]{5}[1-9a-zA-Z]{4}}",
+      data: "case_sensitive"
+  }
+
+files:
+  - dist/pwn-fhod.tar.gz
+
+state: visible
+version: "0.1"

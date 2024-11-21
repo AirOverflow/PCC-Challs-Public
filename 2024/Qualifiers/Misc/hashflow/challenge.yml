@@ -1,0 +1,35 @@
+name: hashflow
+author: hash3liZer
+category: Misc
+description: |-
+  I am the only admin here. What can you possiblly do to me?
+
+  > This challenge is eligible for a bounty of Rs. 1000/-. First one to solve it, open a ticket, along with your payload.
+
+  **Author:** [hash3liZer](https://team.airoverflow.com)
+
+value: 500
+type: container
+
+extra:
+  initial: 500
+  decay: 25
+  minimum: 300
+  image: pcc-misc-hashflow:latest
+  port: 1337
+  command: ""
+  volumes: ""
+  ctype: web
+
+flags:
+  - {
+    type: "regex",
+    content: "PCC{I_m34n_crypt0_4nd_w3b_g0_s0_w3ll_t0g3th3r_[a-zA-Z0-9]{10}}",
+    dataL: "case_sensitive"
+  }
+
+files:
+  - dist/misc-hashflow.tar.gz
+
+static: visible
+version: "0.1"

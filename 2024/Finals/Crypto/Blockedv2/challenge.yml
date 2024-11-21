@@ -1,0 +1,34 @@
+name: Blockedv2
+author: abdullahzamir
+category: Crypto
+description: |-
+  
+  set() nightmare
+
+  **Author**: [abdullahzamir](https://abdullahzamir.github.io)
+
+value: 150
+type: container
+
+flags:
+  - {
+      type: "regex",
+      content: "PCC{h4sh_1s_f4st_not_s3cure_[7-9s-zS-Z]{4}[0-9a-zA-Z]{3}[1-9a-zA-Z]{8}}",
+      data: "case_sensitive"
+  }
+
+extra:
+  initial: 150
+  decay: 25
+  minimum: 50
+  image: pcc-crypto-blockedv2:latest
+  port: 8000
+  command: ""
+  volumes: ""
+  ctype: tcp
+
+files:
+  - dist/crypto-blockedv2.tar.gz
+
+state: visible
+version: "0.1"

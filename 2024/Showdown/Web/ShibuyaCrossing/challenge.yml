@@ -1,0 +1,20 @@
+name: Shibuya Crossing
+author: hash3liZer
+category: Web
+description: |-
+  Shibuya Crossing is a famous intersection in Tokyo, Japan. It is known for its busy streets and the large number of pedestrians
+  that cross the street every day. This intersection is designed in a way that only a specific number is allowed to cross it!!!
+
+start_time: 2024-11-13 10:00:00
+end_time: 2024-11-13 11:00:00
+hints:
+  - Have you seen the function/method that is vulnerable while storing your registration data?
+  - Hmmmmm, that function/method has something to do with converting data to lowercase. I think you can increase the length that way. 
+  - The regex seems to be really buggy. Maybe you can have feeds to by bypass it somehow!!!
+
+teams:
+  - 0
+  - 1
+
+file: dist/showdown-web-shibuya-crossing.zip
+visible: True

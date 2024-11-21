@@ -1,0 +1,19 @@
+name: Entity-Encoder
+author: TheFlash2k
+category: Pwn
+description: |-
+  I gave GPT the following prompt:
+
+  "Write me a simple HTML Entities Encoder in C++"
+
+start_time: 2024-11-05 10:00:00
+end_time: 2024-11-05 11:00:00
+hints:
+    - Looking at the encoding logic, 1-byte is expanded with 3-bytes
+    - For leaks, just debug and ensure that there is no NULL-Byte at the end.
+    - In case your RET gadget or ROP chain is not entirely working, check if your gadget(s) contain any character/bytes that are being encoded
+teams:
+    - 0
+    - 1
+file:
+  dist/showdown-pwn-entity-encoder.tar.gz

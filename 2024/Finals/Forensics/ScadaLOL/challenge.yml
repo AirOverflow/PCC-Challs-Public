@@ -1,0 +1,29 @@
+name: "ScadaLOL"
+author: abdullahzamir
+category: Forensics
+description: |-
+  
+  someone has been injection bunch of weird data to our chemical plant, someone keeps on enabling and disabling the plant, when sending data
+
+  **Author**: [abdullahzamir](https://team.airoverflow.com)
+
+value: 150
+type: dynamic
+
+extra:
+  initial: 150
+  decay: 25
+  minimum: 50
+
+flags:
+  - {
+      type: "static",
+      content: "PCC{MODBUSINJECTIONBADLOL}",
+      data: "case_insensitive"
+  }
+
+files:
+  - dist/chal.pcapng
+
+state: visible
+version: "0.1"

@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dist
+    networks:
+      - internal
+    ports:
+      - "1337:1337"
+
+networks:
+  internal:

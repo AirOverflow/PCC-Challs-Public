@@ -1,0 +1,33 @@
+name: "DIRectors cut."
+author: TheFlash2k
+category: Pwn
+description: |-
+  The DIRectors cut of the movie was insane.
+
+  **Author**: [TheFlash2k](https://theflash2k.me)
+
+value: 300
+type: container
+
+extra:
+  initial: 300
+  decay: 50
+  minimum: 150
+  image: pcc-pwn-directors-cut:latest
+  port: 8000
+  command: ""
+  volumes: ""
+  ctype: tcp
+
+flags:
+  - {
+      type: "regex",
+      content: "PCC{g3td3nt5_4nd_sendf1l3_OP_[7-9s-zS-Z]{4}[0-9a-zA-Z]{3}[1-9a-zA-Z]{8}}",
+      data: "case_sensitive"
+  }
+
+files:
+  - dist/pwn-directors-cut.tar.gz
+
+state: visible
+version: "0.1"

@@ -1,0 +1,35 @@
+name: "Raidware"
+author: TheFlash2k
+category: Rev
+description: |-
+  I mean, Raidware was good, but Falcon-EDR bested me :(. Now, I only _heck_ u.
+
+  > **NOTE:** This might/might not be a real `Raidware-v0.1/Linux/Non-Staged/TCP` stripped-down agent (sadly I never made the agent source public).
+
+  **Author**: [TheFlash2k](https://theflash2k.me)
+
+value: 500
+type: container
+
+extra:
+  initial: 500
+  decay: 25
+  minimum: 300
+  image: ctf-rev-raidware:latest
+  port: 8000
+  command: ""
+  volumes: ""
+  ctype: tcp
+
+flags:
+  - {
+      type: "regex",
+      content: "PCC{1t_w4s_v0_1_i_w0uldnt_m4k3_th4t_345y_t0_r3v_4g3n7s_[7-9s-zS-Z]{4}[0-9a-zA-Z]{3}[1-9a-zA-Z]{8}}",
+      data: "case_sensitive"
+  }
+
+files:
+  - dist/rev-raidware.tar.gz
+
+state: visible
+version: "0.1"

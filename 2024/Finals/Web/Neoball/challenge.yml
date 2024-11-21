@@ -1,0 +1,33 @@
+name: Neoball
+author: hash3liZer
+category: Web
+description: |-
+  I created a game named Neoball which works only on APIs. I have a feeling that the game is vulnerable to some kind of attack. Can you find it out?
+
+  **Author:** [hash3liZer](https://blog.shameerkashif.me)
+
+value: 300
+type: container
+
+extra:
+  initial: 300
+  decay: 25
+  minimum: 150
+  image: pcc-web-neoball:latest
+  port: 1337
+  command: ""
+  volumes: ""
+  ctype: web
+
+flags:
+  - {
+    type: "regex",
+    content: "PCC{I_love_spreading_misinformation[a-zA-Z0-9]{10}}",
+    dataL: "case_sensitive"
+  }
+
+files:
+  - dist/web-neoball.tar.gz
+
+static: visible
+version: "0.1"

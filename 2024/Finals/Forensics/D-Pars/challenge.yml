@@ -1,0 +1,29 @@
+name: "D-Pars"
+author: AhmedJ
+category: Forensics
+description: |-
+  
+  Just jump into the rabbit hole and find the flag.
+
+  **Author**: [AhmedJ](https://team.airoverflow.com)
+
+value: 150
+type: dynamic
+
+extra:
+  initial: 150
+  decay: 25
+  minimum: 50
+
+flags:
+  - {
+      type: "static",
+      content: "PCC{g3T_$ETT-p@r$e}",
+      data: "case_insensitive"
+  }
+
+files:
+  - dist/D.tar
+
+state: visible
+version: "0.1"

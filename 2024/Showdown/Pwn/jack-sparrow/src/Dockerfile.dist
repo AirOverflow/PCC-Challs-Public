@@ -1,0 +1,7 @@
+FROM theflash2k/pwn-chal:1804
+
+ENV CHAL_NAME=jack-sparrow
+COPY ${CHAL_NAME} .
+COPY --chmod=550 --chown=root:ctf-player ld.so .
+COPY --chmod=550 --chown=root:ctf-player libc.so.6 .
+COPY flag.txt .

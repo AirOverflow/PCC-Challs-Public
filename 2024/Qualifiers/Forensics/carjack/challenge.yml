@@ -1,0 +1,42 @@
+name: carjack
+author: MikiVirus
+category: Forensics
+description: |-
+    My friend Ali recently bought a new car, but he has been missing since last week.
+    I want to file a police report to track him, as I fear he may have been kidnapped.
+    Unfortunately, I don’t have any details about his car. Ali has always been passionate about
+    hardware hacking, and I’m certain he would have tried hacking his new car.
+    I was right—when I visited his home, I found a strange file on his laptop.
+    To be honest, I have no idea what this file is,
+    but I’m sure you can help me extract the details from it.
+
+    Brand Of His Car 
+    Name 
+    Model
+    Transmission (Auto/Man)
+
+
+    Flag format is: `PCC{brand_name_model_transmission}`
+    Sample Flag: `PCC{toyota_altis_2019_automatic}`
+
+    **Author**: [MikiVirus](https://mikivirus/github.io)
+
+value: 300
+type: dynamic
+
+extra:
+  initial: 300
+  decay: 25
+  minimum: 150
+
+flags:
+    - {
+        type: "static",
+        content: "PCC{HYUNDAI_SONATA_2023_Automatic}",
+        data: "case_insensitive",
+    }
+
+files:
+    - dist/for-carjack.tar.gz
+
+state: visible

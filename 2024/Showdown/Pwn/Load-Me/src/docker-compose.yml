@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  chall:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.dist
+    ports:
+      - 31337:8000
