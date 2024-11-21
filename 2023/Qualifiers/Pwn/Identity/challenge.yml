@@ -1,0 +1,31 @@
+name: "Identity"
+author: "TheFlash2k"
+category: Pwn
+description: "Just a simple username validator. What could possibly go wrong.\n> Flag is in: `/app/`\n\n__Author:__ TheFlash2k"
+value: 200
+type: container
+
+extra:
+    initial: 200
+    decay: 1
+    minimum: 200
+    image: pccquals_pwn_identity:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp
+image: ./src
+flags:
+    - {
+        type: "regex",
+        content: "PCC{pwn1ng_exp3r7_[0-9a-fA-F]{4}[7-9s-zS-Z]{3}[0-9a-zA-Z]{4}}",
+        data: "case_insensitive",
+    }
+
+files:
+   - dist/Dockerfile
+   - dist/identity
+   - dist/identity.c
+
+state: visible
+version: "0.1"

@@ -1,0 +1,25 @@
+name: "Jaaadu"
+author: "MikiVirus"
+category: Cryptography
+description: Maybe a sanity check? XD!!!
+value: 50
+type: standard
+
+flags:
+
+    - {
+        type: "static",
+        content: "PCC{Alien_Paaaaaapiiii}",
+        data: "case_insensitive",
+    }
+
+tags:
+    - Zip
+    - Forensics
+
+files:
+    - dist/chall.png
+
+state: visible
+
+version: "0.1"

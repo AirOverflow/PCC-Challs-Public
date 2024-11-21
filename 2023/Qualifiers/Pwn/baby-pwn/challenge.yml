@@ -1,0 +1,31 @@
+name: "baby-pwn"
+author: "TheFlash2k"
+category: Pwn
+description: "Should be simple enough, right?\n\n__Author:__ TheFlash2k"
+value: 100
+type: container
+
+extra:
+    initial: 100
+    decay: 1
+    minimum: 100
+    image: pccquals_pwn_babypwn:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp
+    
+image: ./src
+flags:
+    - {
+        type: "regex",
+        content: "PCC{r4nd0m_[0-9a-fA-F]{4}_th3n_r3t2w1n_[7-9s-zS-Z]{3}_whatttt_[1-9a-zA-Z]{4}}",
+        data: "case_insensitive",
+    }
+
+files:
+   - dist/baby-pwn
+   - dist/baby-pwn.c
+
+state: visible
+version: "0.1"

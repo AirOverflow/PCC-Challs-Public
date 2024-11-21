@@ -1,0 +1,29 @@
+name: "CaaS"
+author: "TheFlash2k"
+category: Misc
+description: "A quick and dirty **Compiler as a Service.**\n\n__Author__: TheFlash2k"
+value: 250
+type: container
+
+extra:
+    initial: 250
+    decay: 1
+    minimum: 250
+    image: pccquals_misc_caas:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp
+
+image: ./src
+flags:
+    - {
+        type: "regex",
+        content: "PCC{runt1me_comp1l1ng_1s_d4ng3r0us_[0-9a-fA-F]{4}_[7-9s-zS-Z]{3}_n0_us3r_c0ntr0l_[1-9a-zA-Z]{4}}",
+        data: "case_insensitive",
+    }
+files:
+    - dist/caas.py
+
+state: visible
+version: "0.1"

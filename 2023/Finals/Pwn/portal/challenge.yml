@@ -1,0 +1,29 @@
+name: "portal."
+author: "TheFlash2k"
+category: Pwn
+description: "`Allocation` was weird. I fixed the bug in my new portal. I don't think there's anything that's exploitable here.\n\n__Author__: TheFlash2k"
+value: 300
+type: container
+
+extra:
+    initial: 300
+    decay: 1
+    minimum: 300
+    image: pccfinals_pwn_portal:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp
+image: ./src
+flags:
+    - {
+        type: "regex",
+        content: "PCC{pr1ntf_4dm1n_l34k[6-8a-eE-R]{4}sur3ly_n0_m0r3_u@fss[0-9a-zA-Z]{8}}",
+        data: "case_insensitive",
+    }
+
+files:
+   - dist/pwn-portal.zip
+
+state: visible
+version: "0.1"

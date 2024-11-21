@@ -1,0 +1,29 @@
+name: "Secure ME"
+author: "hash3liZer"
+category: Web
+description: "It's just an application to secure your profile. What can possibly go wrong\n> __NOTE:__ It might take upto 2 minutes for the container to start.\n\n__Author__: hash3liZer"
+value: 250
+type: container
+
+extra:
+    initial: 250
+    decay: 1
+    minimum: 250
+    image: pccquals_web_secureme:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: web
+image: ./src
+flags:
+    - {
+        type: "regex",
+        content: "PCC{cr0ss_s1t3_scr1pt1ng_[0-9a-fA-F]{4}_bu7_sm4rt3r_1_th1nk_[7-9s-zS-Z]{4}[0-9a-zA-Z]{8}}",
+        data: "case_insensitive",
+    }
+
+files:
+   - dist/index.js
+
+state: visible
+version: "0.1"

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jazz ME</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand">JazzME</a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+    <br>
+    <div class="card text-center mb-3" style="margin-left: auto; margin-right: auto; width: 100%; max-width: 600px;">
+        <div class="card-body">
+          <h5 class="card-title">JazzME Application</h5>
+          <p class="card-text">Enter your name without spaces. We have something special prepared for you.</p>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Bajwa" required id="controlnumber">
+              <div class="form-text">We'll never share your details with anyone.</div>
+            </div>
+            <button type="submit" class="btn btn-danger" id="submitter">Submit</button>
+        </div>
+    </div>
+    <br>
+    <div class="alert alert-success ml-2 mr-2" role="alert" style="display: none;margin-left: auto; margin-right: auto; width: 100%; max-width: 1000px;">
+        <p class="mb-0">Thank you for using Jazz ME app: <span style="font-weight: bolder;" id="namebox"></span></p>
+    </div>
+    <div class="alert alert-danger ml-2 mr-2" role="alert" style="display: none;margin-left: auto; margin-right: auto; width: 100%; max-width: 1000px;">
+        <p class="mb-0"><span style="font-weight: bolder;" id="dangerbox"></span></p>
+    </div>
+    <script>
+        let submit = document.getElementById('submitter');
+        submit.addEventListener('click', () => {
+            let namer = document.getElementById('controlnumber');
+            let nameboxer = document.getElementById('namebox');
+            let dangerboxer = document.getElementById('dangerbox');
+
+            if (namer.value == '') return alert('Please enter a valid name');
+
+            fetch('/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({name: namer.value})
+            }).then(res => res.json()).then(data => {
+                if (data.success == true) {
+                    nameboxer.innerHTML = data.response;
+                    nameboxer.parentElement.parentElement.style.display = 'block';
+                    dangerboxer.parentElement.parentElement.style.display = 'none';
+                } else {
+                    dangerboxer.innerHTML = data.response;
+                    dangerboxer.parentElement.parentElement.style.display = 'block';
+                    nameboxer.parentElement.parentElement.style.display = 'none';
+                }
+            });
+        });
+    </script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

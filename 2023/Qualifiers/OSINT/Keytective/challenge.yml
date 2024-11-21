@@ -1,0 +1,22 @@
+name: "Keytective"
+author: "Muhammad Akmal"
+category: OSINT
+description:  We have uncovered that some of our confidential files are being uploaded to the dark web. Now, all of these files are encrypted, and their key is circulating somewhere on a platform that is famous, among developers. The only thing we have been able to uncover is the username of the hacktivist, which is cyberpunk326. We need to find out where the key is located.
+value: 100
+type: standard
+
+
+flags:
+    - {
+        type: "static",
+        content: "PCC{y0u_f0und_th3_k3y!}",
+        data: "case_insensitive",
+    }
+
+tags:
+    - OSINT
+    - SOCIALMEDIA
+
+state: visible
+
+version: "0.1"

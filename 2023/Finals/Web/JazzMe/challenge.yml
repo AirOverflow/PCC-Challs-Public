@@ -1,0 +1,27 @@
+name: "JazzME"
+author: "hash3liZer"
+category: Web
+description: "Taqi is a big fan of Jazz. I made him try my new jazz application.\n\n**__Author__**: hash3liZer"
+value: 100
+type: container
+
+extra:
+    initial: 100
+    decay: 1
+    minimum: 100
+    image: pccfinals_web_jazzme:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp
+
+image: ./src
+flags:
+    - {
+        type: "regex",
+        content: "PCC{c0mmand_1nject10n_w1th_IFS[0-9a-fA-F]{4}_n0_spac3_F0r_you_[5-8a-eR-Z]{4}_[0-9a-zA-Z]{2}}",
+        data: "case_insensitive",
+    }
+
+state: visible
+version: "0.1"

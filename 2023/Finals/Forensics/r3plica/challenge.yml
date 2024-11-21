@@ -1,0 +1,25 @@
+name: "r3plica"
+author: "MikiVirus"
+category: Forensics
+description: sometime you dont need password... just a little bit of brain game! 
+value: 100
+type: standard
+
+flags:
+
+    - {
+        type: "static",
+        content: "PCC{r3pliCati0n_0r_Crack1nG?}",
+        data: "case_insensitive",
+    }
+
+tags:
+    - Zip
+    - Forensics
+
+files:
+    - dist/r3plic@.zip
+
+state: visible
+
+version: "0.1"

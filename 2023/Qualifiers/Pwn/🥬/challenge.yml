@@ -1,0 +1,30 @@
+name: "🥬"
+author: "TheFlash2k"
+category: Pwn
+description: "The Oracle granted me a visit.\n\n__Author:__ TheFlash2k"
+value: 150
+type: container
+
+extra:
+    initial: 150
+    decay: 1
+    minimum: 150
+    image: pccquals_pwn_keel:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp
+    
+image: ./src
+flags:
+    - {
+        type: "regex",
+        content: "PCC{l33k5_ar3_he4lthyy_[7-9s-zS-Z]{3}[0-9a-zA-Z]{5}[1-9a-zA-Z]{4}}",
+        data: "case_insensitive",
+    }
+
+files:
+   - dist/keel
+
+state: visible
+version: "0.1"

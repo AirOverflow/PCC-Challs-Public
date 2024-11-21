@@ -1,0 +1,25 @@
+name: "BleedGreen"
+author: "MikiVirus"
+category: Forensics
+description: "Flag is in the air!\n\n__Author:__ MikiVirus"
+value: 100
+type: standard
+
+
+flags:
+    - {
+        type: "static",
+        content: "PCC{y0u_g0t_1st_and_2nd_4s_w3ll}",
+        data: "case_insensitive",
+    }
+
+tags:
+    - Steganography
+    - JPEG
+
+files:
+    - dist/challenge.jpg
+
+state: visible
+
+version: "0.1"

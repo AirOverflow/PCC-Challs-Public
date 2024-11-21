@@ -1,0 +1,21 @@
+name: "epoch"
+author: "abdullahzamir"
+category: Cryptography
+description: "Awesome random generator\n\n__Author:__ abdullahzamir"
+value: 100
+type: standard
+
+flags:
+    - {
+        type: "static",
+        content: "PCC{t1me_1s_0n_our_side}",
+        data: "case_insensitive",
+    }
+tags:
+    - Cryptography
+
+files:
+    - dist/message.txt
+    - dist/epoch.py
+state: visible
+version: "0.1"

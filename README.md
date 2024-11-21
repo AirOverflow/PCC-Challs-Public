@@ -1,8 +1,8 @@
-# PCC-23-Challs
-Pakistan Cyber Security Challenge - 2023 CTF
+# PCC-Public-Challs
+Pakistan Cyber Security Challenge - CTF
 
 ---
 
-All the writeups/config files for the PCC-23 are in this repo.
+All the writeups/config files for the PCC-CTF are in this repo.
 
 ---

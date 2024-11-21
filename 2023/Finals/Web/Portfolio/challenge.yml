@@ -1,0 +1,27 @@
+name: "Portfolio"
+author: "TheFlash2k"
+category: Web
+description: "This was supposed to be my first portfolio website, glad I didn't set it up.\n\n**__Author__**: TheFlash2k"
+value: 100
+type: container
+
+extra:
+    initial: 100
+    decay: 1
+    minimum: 100
+    image: pccfinals_web_portfolio:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp
+
+image: ./src
+flags:
+    - {
+        type: "regex",
+        content: "PCC{sst1s_st1ll_ctf_g0at3d[0-9a-fA-F]{4}_[5-8a-eR-Z]{4}_[0-9a-zA-Z]{2}}",
+        data: "case_insensitive",
+    }
+
+state: visible
+version: "0.1"

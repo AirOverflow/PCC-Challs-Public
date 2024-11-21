@@ -1,0 +1,50 @@
+name: "555v2"
+author: "abdullahzamir"
+category: Crypto
+description: i hope you understand the positional number system
+value: 150
+type: container
+
+extra:
+    initial: 150
+    decay: 1
+    minimum: 150
+    image: pccfinals_crypto_555:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp # can also be tcp in case of nc connection
+
+# Settings used for Dockerfile deployment
+# If you want to deploy your own docker image, then:
+# image: . # where you have the Dockerfile.
+
+# Specify a host to deploy the challenge onto.
+# The currently supported URI schemes are ssh:// and registry://
+# ssh is an ssh URI where the above image will be copied to and deployed (e.g. ssh://root@123.123.123.123)
+# registry is a Docker registry tag (e.g registry://registry.example.com/test/image)
+# host can also be specified during the deploy process: `ctf challenge deploy challenge --host=ssh://root@123.123.123.123`
+
+# host: null
+
+# healthcheck is a tool/script used to check a challenge
+# If connection_info was provided to CTFd when the challenge was installed, it will be passed to the healthcheck script:
+# ./writeup/exploit.sh --connection-info "nc hostname 12345"
+# This is optional
+# healthcheck: writeup/exploit.sh
+
+# It is recommended that you use regex flags for container challenges
+flags:
+    - {
+        type: "regex",
+        content: "PCC{n0t_a_secr3t_shar3_[0-9a-fA-F]{7}_[5-8a-eR-Z]{4}_[0-9a-zA-Z]{4}}",
+        data: "case_insensitive",
+    }
+
+# Provide paths to files from the same directory that this file is in
+# Accepts strings
+# files:
+#    - dist/source.py
+
+state: visible
+version: "0.1"

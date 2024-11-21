@@ -1,0 +1,30 @@
+name: "allocated."
+author: "TheFlash2k"
+category: Pwn
+description: "The allocation is weird.\n\n__Author__: TheFlash2k"
+value: 150
+type: container
+
+extra:
+    initial: 150
+    decay: 1
+    minimum: 150
+    image: pccfinals_pwn_allocated:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp
+image: ./src
+flags:
+    - {
+        type: "regex",
+        content: "PCC{th1s_%p_l3ak_4nd_1nt_[6-8a-eE-R]{4}_d0_b3_0verfl0w1n_[0-9a-zA-Z]{8}}",
+        data: "case_insensitive",
+    }
+
+files:
+   - dist/allocated
+   - dist/allocated.c
+
+state: visible
+version: "0.1"

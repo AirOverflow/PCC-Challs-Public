@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Me</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container pt-4">
+        <div class="card">
+            <h5 class="card-header">Submit your Application - We will review your details</h5>
+            <div class="card-body">
+                <h5 class="card-title">Your Name</h5>
+                <input class="form-control" placeholder="John Doe" id="name" maxlength="150">
+                <br>
+                <p class="card-text">Give us your application details</p>
+                <textarea placeholder="Something here..." id="description" maxlength="2000" class="form-control"></textarea>
+                <br>
+                <button onclick="submit()" class="btn btn-primary">Submit</button>
+                <br>
+                <p id="err"></p>
+            </div>
+        </div>
+        <script>
+            const submit = () => {
+                let name = document.getElementById("name");
+                let description = document.getElementById("description");
+                fetch("/save", {
+                    method: "POST",
+                    body: JSON.stringify({
+                        name: name.value,
+                        description: description.value,
+                    }),
+                    headers: {
+                        'Content-Type': "application/json",
+                    }
+                })
+                    .then(t => t.text())
+                    .then(t => err.innerHTML = t);
+            }
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+name: "Literal-Byte-Bolt"
+author: "TheFlash2k"
+category: Reversing
+description: "As they say, 'securing the future one `byte` at a time'; can you try and reverse it.\n\n**__Author__**: TheFlash2k"
+value: 100
+type: standard
+flags:
+    - {
+        type: "static",
+        content: "PCC{the_sn4k3_and_th3_byt3s_don7_g0_w3ll_togeth3r}",
+        data: "case_insensitive",
+    }
+
+files:
+    - dist/rev-lbb.zip
+
+state: visible
+version: "0.1"

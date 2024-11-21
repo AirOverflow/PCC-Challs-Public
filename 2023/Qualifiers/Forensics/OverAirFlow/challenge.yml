@@ -1,0 +1,25 @@
+name: "OverAirFlow"
+author: "MikiVirus"
+category: Forensics
+description: "Sam thinks he securely transfered the file lmao!\n\n__Author:__ MikiVirus"
+value: 100
+type: standard
+
+
+flags:
+    - {
+        type: "static",
+        content: "PCC{blu3t00th_w!th_n0_t4uth}",
+        data: "case_insensitive",
+    }
+
+tags:
+    - Network Forensics
+    - wireshark
+
+files:
+    - dist/Over-Air-Flow.pcapng
+
+state: visible
+
+version: "0.1"

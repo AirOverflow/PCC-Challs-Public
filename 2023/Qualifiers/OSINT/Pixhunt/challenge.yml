@@ -1,0 +1,25 @@
+name: "Pixhunt"
+author: "Syed Aoun Shah"
+category: OSINT
+description: "this image was posted on this date n time 8:35 PM · Oct 14, 2023 find the username of the person who uploaded it. Flag Format: PCC{username}"
+value: 50
+type: standard
+
+
+flags:
+    - {
+        type: "static",
+        content: "PCC{Rogask4}",
+        data: "case_insensitive",
+    }
+
+tags:
+    - OSINT
+    - SOCIALMEDIA
+
+files:
+    - dist/hunt.jpeg
+
+state: visible
+
+version: "0.1"

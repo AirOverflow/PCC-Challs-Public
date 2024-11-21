@@ -1,0 +1,21 @@
+name: "IntIO"
+author: "TheFlash2k"
+category: Reversing
+description: "When I was studying about Windows Internals, I found a few interesting things about IO.\n\n**__Author__**: TheFlash2k"
+value: 300
+type: standard
+flags:
+    - {
+        type: "static",
+        content: "PCC{w3ll_all_y0u_h4d_t0_d0_w4s_l0ad_th3_dr1v3r}",
+        data: "case_insensitive",
+    }
+
+files:
+    - dist/IntIO.sys
+    
+hints:
+    - "#define IOCTL_PCC CTL_CODE(FILE_DEVICE_UNKNOWN, 0x2049, METHOD_BUFFERED, FILE_ANY_ACCESS)"
+
+state: visible
+version: "0.1"

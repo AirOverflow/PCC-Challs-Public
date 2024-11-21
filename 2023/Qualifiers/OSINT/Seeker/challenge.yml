@@ -1,0 +1,24 @@
+name: "Seeker"
+author: "Syed Aoun Shah"
+category: OSINT
+description: "DEADLY CYBER ATTACKERS have his info. Can you find his first name? Flag Format: PCC{name}"
+value: 50
+type: standard
+
+
+flags:
+    - {
+        type: "static",
+        content: "PCC{bommaluru}",
+        data: "case_insensitive",
+    }
+
+tags:
+    - OSINT
+    - SOCIALMEDIA
+
+files:
+    - dist/Seeker.jpg
+state: visible
+
+version: "0.1"

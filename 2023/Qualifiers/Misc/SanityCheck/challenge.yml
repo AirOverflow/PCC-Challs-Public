@@ -1,0 +1,15 @@
+name: "SanityCheck"
+author: "TheFlash2k"
+category: Misc
+description: "https://discord.gg/s4wEUruyRr"
+value: 10
+type: standard
+
+flags:
+    - {
+        type: "static",
+        content: "PCC{w3lc0m3_t0_pcc_2023}",
+        data: "case_insensitive",
+    }
+state: visible
+version: "0.1"

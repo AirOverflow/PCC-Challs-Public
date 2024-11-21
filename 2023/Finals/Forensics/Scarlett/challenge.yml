@@ -1,0 +1,27 @@
+name: "Scarlett"
+author: "MikiVirus"
+category: Forensics
+description: Flag length is 54 characters. Just dive into the challenge and get the flag.
+value: 300
+type: standard
+
+flags:
+
+    - {
+        type: "static",
+        content: "PCC{AR3_Y0U_L05T_1N_B1T5??_0500110001100001100000112}",
+        data: "case_insensitive",
+    }
+
+tags:
+    - Bits n Bytes
+    - LSB
+    - Steganography
+
+files:
+    - dist/edited-chall.png
+    - dist/original.png
+
+state: visible
+
+version: "0.1"

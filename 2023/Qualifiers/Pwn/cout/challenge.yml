@@ -1,0 +1,30 @@
+name: "cout"
+author: "TheFlash2k"
+category: Pwn
+description: "Should've used cout.\n\n__Author:__ TheFlash2k"
+value: 50
+type: container
+
+extra:
+    initial: 50
+    decay: 1
+    minimum: 50
+    image: pccquals_pwn_cout:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp
+
+image: ./src/
+files:
+    - dist/cout
+
+flags:
+    - {
+        type: "regex",
+        content: "PCC{f0rm4t_57r1ngs_[0-9a-fA-F]{2}[7-9s-zS-Z]{2}[2-7e-sE-S]{2}[0-9a-zA-Z]{2}_[0-3]{2}[a-e]{2}}",
+        data: "case_insensitive",
+    }
+
+state: visible
+version: "0.1"

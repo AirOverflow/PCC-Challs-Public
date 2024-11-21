@@ -1,0 +1,34 @@
+name: "notco"
+author: "abdullahzamir"
+category: Crypto
+description: "i accidentally leaked the private key\n\n**__Author__**: abdullahzamir" 
+value: 150
+type: container
+
+extra:
+    initial: 150
+    decay: 1
+    minimum: 150
+    image: pccfinals_crypto_notco:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp # can also be tcp in case of nc connection
+
+# Settings used for Dockerfile deployment
+# If you want to deploy your own docker image, then:
+# It is recommended that you use regex flags for container challenges
+flags:
+    - {
+        type: "regex",
+        content: "PCC{coPr1me_[0-9a-fA-F]{4}_[5-8a-eR-Z]{4}_[0-9a-zA-Z]{4}}",
+        data: "case_insensitive",
+    }
+
+# Provide paths to files from the same directory that this file is in
+# Accepts strings
+files:
+   - dist/EE.py
+
+state: visible
+version: "0.1"

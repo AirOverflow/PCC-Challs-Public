@@ -1,0 +1,19 @@
+name: "etyBtloB"
+author: "TheFlash2k"
+category: Reversing
+description: "This startup found this weird binary on one of their production servers. No one knew what it was.\n\n__Author__: TheFlash2k"
+value: 200
+type: standard
+
+flags:
+    - {
+        type: "static",
+        content: "PCC{th3se_b1ts_g0t_m3_cr4zyy}",
+        data: "case_insensitive",
+    }
+
+files:
+    - dist/boltbyte
+
+state: visible
+version: "0.1"

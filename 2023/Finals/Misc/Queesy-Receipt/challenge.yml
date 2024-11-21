@@ -1,0 +1,30 @@
+name: "Queesy Receipts"
+author: "TheFlash2k"
+category: Misc
+description: "Pretty weird; pretty guessy. Very meaningful blob.\n\n__Author__: TheFlash2k"
+value: 100
+type: container
+
+extra:
+    initial: 100
+    decay: 1
+    minimum: 100
+    image: pccfinals_misc_qr:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp
+
+image: ./src
+flags:
+    - {
+        type: "regex",
+        content: "PCC{b1nary_qR_c0d3ss_ar3_3zzzz_[0-9a-fA-F]{4}_[5-8a-eR-Z]{4}_[0-9a-zA-Z]{2}}",
+        data: "case_insensitive",
+    }
+
+hints:
+    - `[i[0] for i in name.split()]` (Not on the blob tho.)
+
+state: visible
+version: "0.1"

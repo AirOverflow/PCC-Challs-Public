@@ -1,0 +1,28 @@
+name: "Uni"
+author: "abdullahzamir"
+category: Pwn
+description: "i hope you can understand machine code \n\n__Author__: abdullahzamir"
+value: 100
+type: container
+
+extra:
+    initial: 100
+    decay: 1
+    minimum: 100
+    image: pccfinals_pwn_unibrr:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp
+
+image: ./src
+flags:
+    - {
+        type: "regex",
+        content: "PCC{un1c0rn_mM@p_bYp@ss_3aX_[A-Za-z0-9]{2}[F-Rf-r6-9]{6}}",
+        data: "case_insensitive",
+    }
+files:
+   - dist/unibrr.py
+state: visible
+version: "0.1"

@@ -1,0 +1,26 @@
+name: "QR"
+author: "MikiVirus"
+category: Forensics
+description: Maybe 0DAY? XD!!!
+value: 100
+type: standard
+
+flags:
+
+    - {
+        type: "static",
+        content: "PCC{eZz_R3CoV3RY..._M4Y_B3_A!?}",
+        data: "case_insensitive",
+    }
+
+tags:
+    - Resolution recovery
+    - QR
+    - Steganography 
+
+files:
+    - dist/chall.jpg
+
+state: visible
+
+version: "0.1"

@@ -1,0 +1,29 @@
+name: "[etyBtloB]"
+author: "TheFlash2k"
+category: Reversing
+description: "This startup found this weird binary on one of their production servers. No one knew what it was.\n\n__Author__: TheFlash2k"
+value: 200
+type: container
+
+extra:
+    initial: 200
+    decay: 1
+    minimum: 200
+    image: pccquals_reversing_boltbyte:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: web
+
+image: ./src/
+
+
+flags:
+    - {
+        type: "regex",
+        content: "PCC{th3se_b1ts_g0t_m3_cr4zyy_[0-9a-fA-F]{8}[7-9s-zS-Z]{4}[0-9a-zA-Z]{4}}",
+        data: "case_insensitive",
+    }
+
+state: visible
+version: "0.1"

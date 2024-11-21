@@ -1,0 +1,16 @@
+name: "🎹"
+author: "TheFlash2k"
+category: Misc
+description: "Classical, yet technical. Beethoven wouldn't want to hear this, well he couldn't anyways.\n\n__Author:__ TheFlash2k"
+value: 100
+type: standard
+flags:
+    - {
+        type: "static",
+        content: "PCC{MOZART_FLAG}",
+        data: "case_insensitive",
+    }
+files:
+    - dist/deafening_silence.mp3
+state: visible
+version: "0.1"

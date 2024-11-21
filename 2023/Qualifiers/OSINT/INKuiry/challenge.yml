@@ -1,0 +1,25 @@
+name: "INKuiry"
+author: "Abdullah Imran"
+category: OSINT
+description: can you track down when this image was published on social media? im sure you'll find the flag somewhere there! 
+value: 200
+type: standard
+
+
+flags:
+    - {
+        type: "static",
+        content: "PCC{N0t_T00_Sh4bby_Chief}",
+        data: "case_insensitive",
+    }
+
+tags:
+    - OSINT
+    - SOCIALMEDIA
+
+files:
+    - dist/INK.png
+
+state: visible
+
+version: "0.1"

@@ -1,0 +1,28 @@
+name: "Uber [Dynamic]"
+author: "TheFlash2k"
+category: Reversing
+description: "Look Ma, I can DRIVE.\n\n__Author__: TheFlash2k"
+value: 100
+type: container
+
+extra:
+    initial: 100
+    decay: 1
+    minimum: 100
+    image: pccquals_reversing_uber:latest
+    port: 8000
+    command: ""
+    volumes: '{"/dev/": {"bind":"/dev/","mode":"ro"},"/usr/src/": {"bind":"/usr/src/","mode":"ro"}, "/lib/modules/": {"bind":"/lib/modules/","mode":"ro"} }'
+    ctype: web
+
+image: ./src/
+
+flags:
+    - {
+        type: "regex",
+        content: "PCC{l00k_m@@_f1rst_dr1v3r_r3v_[0-9a-fA-F]{8}[7-9s-zS-Z]{4}[0-9a-zA-Z]{4}}",
+        data: "case_insensitive",
+    }
+
+state: visible
+version: "0.1"

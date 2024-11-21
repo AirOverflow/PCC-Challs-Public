@@ -1,0 +1,19 @@
+name: "Chronos"
+author: "abdullahzamir"
+category: Forensics
+description: "Somethings Fishing, why am in the future\n\n__Author:__ abdullahzamir"
+value: 100
+type: standard
+
+flags:
+    - {
+        type: "static",
+        content: "pcc{l1v1ng_1n_th3_Future}",
+        data: "case_insensitive",
+    }
+
+files:
+    - dist/Chronos.pcapng
+
+state: visible
+version: "0.1"

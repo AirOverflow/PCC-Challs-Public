@@ -1,0 +1,27 @@
+name: "Lama"
+author: "hash3liZer"
+category: Web
+description: "Taqi made a basic web chall, no way you can do this one.\n\n**__Author__**: hash3liZer"
+value: 150
+type: container
+
+extra:
+    initial: 150
+    decay: 1
+    minimum: 150
+    image: pccfinals_web_lama:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp
+
+image: ./src
+flags:
+    - {
+        type: "regex",
+        content: "PCC{sst1s_w1th_ch3cks_[5-8a-eR-Z]{4}_[0-9a-zA-Z]{6}}",
+        data: "case_insensitive",
+    }
+
+state: visible
+version: "0.1"

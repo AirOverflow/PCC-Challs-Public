@@ -1,0 +1,19 @@
+name: "UnPronounceable"
+author: "TheFlash2k"
+category: Reversing
+description: "I didn't know it couldn't be pronounced. I might've made a few errors in the source code I wrote.\n\n__Author__: TheFlash2k"
+value: 100
+type: standard
+
+flags:
+    - {
+        type: "static",
+        content: "PCC{1n73rcal_7h3_0g}",
+        data: "case_insensitive",
+    }
+
+files:
+    - dist/UnProunounceable.i
+
+state: visible
+version: "0.1"

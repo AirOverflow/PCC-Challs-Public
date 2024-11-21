@@ -1,0 +1,18 @@
+name: "IBeam"
+author: "TheFlash2k & MikiVirus"
+category: Misc
+description: "This I-Beam seems cursed.\n\n__Authors:__ TheFlash2k & MikiVirus"
+value: 200
+type: standard
+
+flags:
+    - {
+        type: "static",
+        content: "PCC{recording}",
+        data: "case_insensitive",
+    }
+files:
+    - dist/IBeam.mp4
+
+state: visible
+version: "0.1"

@@ -1,0 +1,29 @@
+name: "[UnPronounceable]"
+author: "TheFlash2k"
+category: Reversing
+description: "I didn't know it couldn't be pronounced. I might've made a few errors in the source code I wrote.\n\n__Author__: TheFlash2k"
+value: 200
+type: container
+
+extra:
+    initial: 100
+    decay: 1
+    minimum: 100
+    image: pccquals_reversing_unpronounceable:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: web
+
+image: ./src/
+
+
+flags:
+    - {
+        type: "regex",
+        content: "PCC{1nterc@l_7h3_[0-9a-fA-F]{4}_0G_[7-9s-zS-Z]{8}_7ru3_[0-9a-zA-Z]{4}}",
+        data: "case_insensitive",
+    }
+
+state: visible
+version: "0.1"

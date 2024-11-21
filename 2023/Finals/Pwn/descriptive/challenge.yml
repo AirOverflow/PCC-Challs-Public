@@ -1,0 +1,30 @@
+name: "Descriptive"
+author: "TheFlash2k"
+category: Pwn
+description: "Gotta handle d33z **fds** with care.\n\n__Author__: TheFlash2k"
+value: 150
+type: container
+
+extra:
+    initial: 150
+    decay: 1
+    minimum: 150
+    image: pccfinals_pwn_descriptive:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp
+image: ./src
+flags:
+    - {
+        type: "regex",
+        content: "PCC{m3m0ry_f1l3_d3scr1pt0rs_ar3_g00d_[0-9A-Za-z]{4}[1-4S-Zs-z]{4}[6-9F-Rf-r]{2}}",
+        data: "case_insensitive",
+    }
+
+files:
+   - dist/descriptive
+   - dist/descriptive.c
+
+state: visible
+version: "0.1"

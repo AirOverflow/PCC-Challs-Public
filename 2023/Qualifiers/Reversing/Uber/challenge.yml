@@ -1,0 +1,19 @@
+name: "Uber"
+author: "TheFlash2k"
+category: Reversing
+description: "Look Ma, I can DRIVE.\n\n__Author__: TheFlash2k"
+value: 100
+type: standard
+
+flags:
+    - {
+        type: "static",
+        content: "PCC{dr1v3r_l0ad1ng_1s_h4rd_frfr}",
+        data: "case_insensitive",
+    }
+
+files:
+    - dist/Uber.ko
+
+state: visible
+version: "0.1"

@@ -1,0 +1,29 @@
+name: "CaaS' Revenge"
+author: "TheFlash2k"
+category: Misc
+description: "I fixed the errors in previous **CaaS** and limited it more, I don't think you can do anything now. Also, I made the errors more descriptive, but *I think*, DEBUG is off on remote.\n\n**__Author__**: TheFlash2k"
+value: 300
+type: container
+
+extra:
+    initial: 300
+    decay: 1
+    minimum: 300
+    image: pccfinals_misc_caasrevenge:latest
+    port: 8000
+    command: ""
+    volumes: ""
+    ctype: tcp
+
+image: ./src
+flags:
+    - {
+        type: "regex",
+        content: "PCC{truly_m4rv3l0us_w4y_0f_1nclud1ng_h34d3rs_[0-9a-fA-F]{7}_[5-8a-eR-Z]{4}_[0-9a-zA-Z]{4}}",
+        data: "case_insensitive",
+    }
+files:
+    - dist/caas-revenge.py
+
+state: visible
+version: "0.1"

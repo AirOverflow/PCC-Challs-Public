@@ -1,0 +1,25 @@
+name: "BaseRecovery"
+author: "MikiVirus"
+category: Cryptography
+description: "I thought U were the END, but it was just the begining!!!\nUe2I2NF9kNHRhX3IzQzB2M3JlRH0=\n\n__Author:__ MikiVirus"
+value: 100
+type: standard
+
+flags:
+
+    # A static case insensitive flag
+    - {
+        type: "static",
+        content: "PCC{b64_d4ta_r3C0v3reD}",
+        data: "case_insensitive",
+    }
+
+
+
+tags:
+    - Cryptography
+    - BaseRecovery
+
+state: visible
+
+version: "0.1"
